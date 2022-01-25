@@ -1,8 +1,8 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 --honeypot
-RegisterServerEvent('qb-template:server:fakename')
-AddEventHandler('qb-template:server:fakename', function(source, amount, reason)
+RegisterServerEvent('qb-template:server:callforserverside')
+AddEventHandler('qb-template:server:callforserverside', function(source, amount, reason)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     TriggerClientEvent('QBCore:Notify', src, {text="Secret Admin", caption="You added " .. amount .. " to your bank"}, "success")
